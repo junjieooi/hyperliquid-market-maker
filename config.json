@@ -1,0 +1,60 @@
+{
+  "base_url": "https://api.hyperliquid.xyz",
+  "symbol": "xyz:XYZ100",
+  "perp_dex": null,
+  "max_inventory": 1.5,
+  "session_drawdown_limit": -500,
+  "order_size": 0.2,
+  "num_layers": 3,
+  "layer_spacing_bps": 10,
+  "spread": {
+    "base_bps": 20,
+    "inventory_skew_bps": 8,
+    "orderbook_skew_bps": 4,
+    "long_bias_bps": 4,
+    "volatility_guard_threshold_bps": 50,
+    "volatility_guard_multiplier": 3,
+    "quote_refresh_threshold_bps": 15
+  },
+  "funding": {
+    "flush_lead_seconds": 300,
+    "resume_delay_seconds": 10
+  },
+  "oracle": {
+    "deviation_threshold_bps": 80
+  },
+  "heartbeat": {
+    "url": "",
+    "interval_seconds": 60
+  },
+  "adaptive": {
+    "volatility_lookback": 100,
+    "baseline_volatility_bps": 50,
+    "adverse_selection_threshold": -0.002,
+    "adverse_selection_lookback": 10,
+    "us_market_hours_spread_mult": 1.5,
+    "funding_alpha_threshold_bps": 5.0,
+    "funding_alpha_boost_bps": 10.0,
+    "fill_rate_high_threshold": 0.8,
+    "fill_rate_low_threshold": 0.2,
+    "fill_rate_lookback_minutes": 15,
+    "fill_rate_spread_mult_max": 2.0,
+    "fill_rate_spread_mult_min": 0.7
+  },
+  "risk": {
+    "max_unrealized_loss_pct": 0.03,
+    "emergency_flatten_enabled": true
+  },
+  "telegram": {
+    "enabled": true,
+    "bot_token_env": "TELEGRAM_BOT_TOKEN",
+    "chat_id_env": "TELEGRAM_CHAT_ID",
+    "update_interval_seconds": 900
+  },
+  "margin": {
+    "auto_add_margin": true,
+    "auto_margin_fraction": 0.8
+  },
+  "private_key_env": "PRIVATE_KEY",
+  "account_address_env": "ACCOUNT_ADDRESS"
+}
